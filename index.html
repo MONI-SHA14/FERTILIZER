@@ -1,20 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fertilizer Recommendation</title>
+<title>AI Fertilizer Recommendation System</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#4CAF50,#81C784);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:400px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    color:#2e7d32;
+}
+
+label{
+    font-weight:bold;
+}
+
+input,select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2e7d32;
+}
+
+.result{
+    text-align:center;
+    font-size:18px;
+    color:#d32f2f;
+    font-weight:bold;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h2>AI Fertilizer Recommendation System</h2>
+<div class="container">
+
+<h2>🌱 AI Fertilizer Recommendation System</h2>
 
 <form action="/predict" method="post">
 
-Temperature <input type="text" name="Temperature"><br><br>
-Humidity <input type="text" name="Humidity"><br><br>
-Moisture <input type="text" name="Moisture"><br><br>
+<label>Temperature</label>
+<input type="text" name="Temperature">
 
-Soil Type
+<label>Humidity</label>
+<input type="text" name="Humidity">
+
+<label>Moisture</label>
+<input type="text" name="Moisture">
+
+<label>Soil Type</label>
 <select name="Soil">
 <option value="0">Sandy</option>
 <option value="1">Loamy</option>
@@ -23,9 +92,7 @@ Soil Type
 <option value="4">Clayey</option>
 </select>
 
-<br><br>
-
-Crop Type
+<label>Crop Type</label>
 <select name="Crop">
 <option value="0">Maize</option>
 <option value="1">Sugarcane</option>
@@ -36,17 +103,24 @@ Crop Type
 <option value="6">Rice</option>
 </select>
 
-<br><br>
+<label>Nitrogen</label>
+<input type="text" name="Nitrogen">
 
-Nitrogen <input type="text" name="Nitrogen"><br><br>
-Phosphorous <input type="text" name="Phosphorous"><br><br>
-Potassium <input type="text" name="Potassium"><br><br>
+<label>Phosphorous</label>
+<input type="text" name="Phosphorous">
 
-<input type="submit" value="Predict">
+<label>Potassium</label>
+<input type="text" name="Potassium">
+
+<button type="submit">Predict Fertilizer</button>
 
 </form>
 
-<h3>{{ prediction_text }}</h3>
+<div class="result">
+{{ prediction_text }}
+</div>
+
+</div>
 
 </body>
 </html>
