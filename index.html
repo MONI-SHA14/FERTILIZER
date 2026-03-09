@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fertilizer Recommendation</title>
+</head>
+
+<body>
+
+<h2>AI Fertilizer Recommendation System</h2>
+
+<form action="/predict" method="post">
+
+Temperature <input type="text" name="Temperature"><br><br>
+Humidity <input type="text" name="Humidity"><br><br>
+Moisture <input type="text" name="Moisture"><br><br>
+
+Soil Type
+<select name="Soil">
+<option value="0">Sandy</option>
+<option value="1">Loamy</option>
+<option value="2">Black</option>
+<option value="3">Red</option>
+<option value="4">Clayey</option>
+</select>
+
+<br><br>
+
+Crop Type
+<select name="Crop">
+<option value="0">Maize</option>
+<option value="1">Sugarcane</option>
+<option value="2">Cotton</option>
+<option value="3">Tobacco</option>
+<option value="4">Paddy</option>
+<option value="5">Wheat</option>
+<option value="6">Rice</option>
+</select>
+
+<br><br>
+
+Nitrogen <input type="text" name="Nitrogen"><br><br>
+Phosphorous <input type="text" name="Phosphorous"><br><br>
+Potassium <input type="text" name="Potassium"><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>

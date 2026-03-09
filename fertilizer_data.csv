@@ -1,0 +1,11 @@
+Temperature,Humidity,Moisture,Soil_Type,Crop_Type,Nitrogen,Phosphorous,Potassium,Fertilizer
+26,52,38,Sandy,Maize,37,0,0,Urea
+29,52,45,Loamy,Sugarcane,12,0,36,DAP
+34,65,62,Black,Cotton,7,9,30,14-35-14
+32,62,34,Red,Tobacco,22,0,20,28-28
+28,54,46,Clayey,Paddy,35,0,0,Urea
+25,50,40,Sandy,Wheat,10,10,10,17-17-17
+30,60,50,Loamy,Rice,20,10,10,20-20
+33,63,55,Black,Maize,15,5,10,10-26-26
+27,58,44,Clayey,Sugarcane,25,15,0,DAP
+31,61,48,Red,Cotton,10,10,20,28-28
